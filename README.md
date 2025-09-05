@@ -46,8 +46,8 @@ The purpose of Celery is to handle tasks that don't need to be completed immedia
 In this project, Redis serves two main purposes. It acts as a message broker for Celery, helping to queue and manage tasks. It is also used for caching, which involves temporarily storing frequently accessed data (like popular listings) in memory to reduce the number of database queries and speed up the application.
 
 ### DevOps and Deployment
-## Docker: 
+#### Docker: 
 The purpose of Docker is to containerize the application, packaging the code and all its dependencies into a consistent, isolated environment. This ensures that the application runs the same way on a developer's machine as it does on a production server, simplifying the development and deployment process.
 
-## CI/CD Pipelines: 
+#### CI/CD Pipelines: 
 The purpose of these automated pipelines is to streamline the entire development workflow. CI (Continuous Integration) automatically tests new code changes to catch bugs early, while CD (Continuous Deployment) automatically deploys the tested code to production. This ensures that new features and bug fixes can be delivered to users quickly and reliably.
