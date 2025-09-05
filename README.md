@@ -192,4 +192,24 @@ Payment security is non-negotiable for any e-commerce platform. It is the reason
 ### Maintaining Platform Integrity
 The integrity of the platform depends on the trustworthiness of its data. Security measures like authorization prevent malicious users from tampering with listings, bookings, or reviews. Without these controls, a competitor or a dissatisfied user could easily manipulate data, leading to a loss of trust from the community and ultimately, the failure of the platform.
 
+## CI/CD Pipeline
+## CI/CD pipelines are an automated process that helps developers build, test, and deploy code more reliably and frequently.
 
+### What are CI/CD Pipelines? 🚀
+1. CI stands for Continuous Integration. This is the first part of the pipeline. Whenever a developer pushes new code to a central repository (like GitHub), the CI pipeline automatically runs a series of tests to check for bugs and ensure the new code works with the existing code. This helps catch errors early in the development process, saving time and effort.
+
+2. CD stands for Continuous Delivery/Deployment. After the code passes the CI tests, the CD part of the pipeline automatically prepares the code to be released. It can either deliver the code to a staging environment for a final manual check (Continuous Delivery) or automatically deploy it directly to the live production server (Continuous Deployment).
+
+### Why are they Important? ✅
+CI/CD pipelines are critical for this project because they streamline the development workflow and improve code quality. They ensure that new features and bug fixes can be delivered to users faster and with fewer errors. This automation reduces manual work, which lowers the risk of human error and allows the team to focus on building new features rather than dealing with deployment issues.
+
+### Tools Used 🛠️
+For building CI/CD pipelines, a few key tools are commonly used:
+
+1. GitHub Actions: A versatile tool built directly into GitHub that automates, builds, tests, and deploys code.
+
+2. Docker: This is essential for ensuring that the application runs in a consistent environment across all stages of the pipeline, from development to production.
+
+3. Jenkins: A popular open-source automation server that can be used to create and manage complex pipelines.
+
+4. GitLab CI/CD: A built-in feature of GitLab that provides a comprehensive and easy-to-use solution for pipeline automation.
