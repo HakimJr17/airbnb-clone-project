@@ -52,7 +52,7 @@ The purpose of Docker is to containerize the application, packaging the code and
 #### CI/CD Pipelines: 
 The purpose of these automated pipelines is to streamline the entire development workflow. CI (Continuous Integration) automatically tests new code changes to catch bugs early, while CD (Continuous Deployment) automatically deploys the tested code to production. This ensures that new features and bug fixes can be delivered to users quickly and reliably.
 
-## Database Design
+## Database Design Overview
 ### Below are the key entities that represent the core data of the application. Here are these main entities and their relationships.
 
 ### Users 👥
@@ -149,3 +149,23 @@ This entity stores the images for each property.
 
 Relationship: A property can have many photos (one-to-many relationship), but each photo belongs to only one property. This structure makes it easy to add, remove, and manage images for each listing.
 
+## Feature Breakdown
+Features of the AirBnB clone project 
+
+### User Management
+This feature is the core of the application's security and personalization. It allows users to securely register for an account, log in, and manage their personal details, ensuring that each user has a unique and protected identity on the platform. A robust user management system is essential for a user-centric application like this.
+
+### Property Management
+This set of features is what allows the "hosts" on the platform to create and manage their listings. It includes everything from creating a new property listing with photos and descriptions to updating its availability or price, and retrieving property information for display to potential guests. This is critical for building the inventory of homes available for booking.
+
+### Booking System
+This is the central function that connects guests with properties. The booking system provides a mechanism for users to reserve a property for specific dates and manages the entire lifecycle of a booking, including confirmation and cancellation. This feature is the foundation of the platform's primary service.
+
+### Payment Processing
+This feature is responsible for handling all financial transactions on the platform. It involves integrating with a payment gateway to securely process payments for bookings and record all payment details. A reliable payment system is necessary to enable transactions and generate revenue for the business.
+
+### Review System
+The review system builds trust and credibility within the community. It allows guests to leave written reviews and ratings for the properties they have stayed in, providing valuable feedback for future guests and hosts. This feature is crucial for maintaining the quality and reputation of the listings.
+
+### Data Optimization
+This feature focuses on the performance and efficiency of the application's backend. It involves implementing strategies like database indexing, caching with Redis, and writing efficient queries to ensure that data is retrieved and stored quickly, even as the number of users and properties grows. Good data optimization is key to a fast and responsive user experience.
