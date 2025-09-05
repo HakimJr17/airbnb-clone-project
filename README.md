@@ -2,7 +2,7 @@
 ## About the Project
 The Airbnb Clone Project is a comprehensive, real-world application designed to simulate the development of a robust booking platform like Airbnb. It involves a deep dive into full-stack development, focusing on backend systems, database design, API development, and application security. This project enables learners to understand complex architectures, workflows, and collaborative team dynamics while building a scalable web application.
 
-## Team Roles
+# Team Roles
 ### A breakdown of the various roles required for a project like an Airbnb clone. I outlines what each position does and its importance in bringing a software product from an idea to a functional reality.
 1. Business Analyst (BA): They figure out what the app needs to do from a business perspective. They'd define features like "users can search for listings" or "hosts can create a profile." They're the bridge between the business side and the technical team.
 
@@ -22,7 +22,7 @@ The Airbnb Clone Project is a comprehensive, real-world application designed to 
 
 9. DevOps Engineer: They manage the infrastructure and tools for building, testing, and deploying the application. They're the ones who make sure the app is running smoothly on the servers and can be updated without issues.
 
-## Technology Stack
+# Technology Stack
 ### Desription of the technologies to be used in the AirBnB clone project and their application 
 
 ### Backend and API Development
@@ -52,7 +52,7 @@ The purpose of Docker is to containerize the application, packaging the code and
 #### CI/CD Pipelines: 
 The purpose of these automated pipelines is to streamline the entire development workflow. CI (Continuous Integration) automatically tests new code changes to catch bugs early, while CD (Continuous Deployment) automatically deploys the tested code to production. This ensures that new features and bug fixes can be delivered to users quickly and reliably.
 
-## Database Design
+# Database Design
 ### Below are the key entities that represent the core data of the application. Here are these main entities and their relationships.
 
 ### Users 👥
@@ -149,7 +149,7 @@ This entity stores the images for each property.
 
 Relationship: A property can have many photos (one-to-many relationship), but each photo belongs to only one property. This structure makes it easy to add, remove, and manage images for each listing.
 
-## Feature Breakdown
+# Feature Breakdown
 Features of the AirBnB clone project 
 
 ### User Management
@@ -170,7 +170,7 @@ The review system builds trust and credibility within the community. It allows g
 ### Data Optimization
 This feature focuses on the performance and efficiency of the application's backend. It involves implementing strategies like database indexing, caching with Redis, and writing efficient queries to ensure that data is retrieved and stored quickly, even as the number of users and properties grows. Good data optimization is key to a fast and responsive user experience.
 
-## API Security
+# API Security
 Key security measures for the project will be implemented to protect user data, ensure secure transactions, and maintain the integrity of the platform. The main measures include authentication, authorization, and rate limiting.
 
 ### Authentication 🔐
@@ -192,7 +192,7 @@ Payment security is non-negotiable for any e-commerce platform. It is the reason
 ### Maintaining Platform Integrity
 The integrity of the platform depends on the trustworthiness of its data. Security measures like authorization prevent malicious users from tampering with listings, bookings, or reviews. Without these controls, a competitor or a dissatisfied user could easily manipulate data, leading to a loss of trust from the community and ultimately, the failure of the platform.
 
-## CI/CD Pipeline
+# CI/CD Pipeline
 ## CI/CD pipelines are an automated process that helps developers build, test, and deploy code more reliably and frequently.
 
 ### What are CI/CD Pipelines? 🚀
