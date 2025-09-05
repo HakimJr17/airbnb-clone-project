@@ -21,3 +21,18 @@ The Airbnb Clone Project is a comprehensive, real-world application designed to 
 8. Test Automation Engineer: This is a specialized type of QA engineer who writes code to automatically test the application. This saves a lot of time and helps catch issues quickly as new features are added.
 
 9. DevOps Engineer: They manage the infrastructure and tools for building, testing, and deploying the application. They're the ones who make sure the app is running smoothly on the servers and can be updated without issues.
+
+## Technology Stack Overview
+### Desription of the technologies to be used in the AirBnB clone project and their application 
+
+### Backend and API Development
+#### Django: 
+This is the foundation of the project's backend. As a high-level Python web framework, its purpose is to provide a robust and efficient way to build the core logic of the Airbnb clone, including user authentication, listing management, and booking systems.
+
+#### Django REST Framework (DRF): 
+Built on top of Django, DRF's purpose is to make it easy to create the RESTful API. This API is what allows the different parts of the application—like the frontend website or mobile app—to communicate with the backend database. It handles things like serializing data (converting database information into a format like JSON) and managing API endpoints.
+
+#### PostgreSQL: 
+The purpose of this powerful relational database is to reliably store all the structured data for the application. This would include user profiles, property listings, booking details, and reviews, ensuring data integrity and allowing for complex queries.
+
+#### GraphQL: While a REST API is built with DRF, GraphQL would be used to provide a more flexible and efficient way for the client (frontend) to request data. Its purpose is to allow the frontend to ask for exactly the data it needs in a single request, which can reduce over-fetching and improve performance.
