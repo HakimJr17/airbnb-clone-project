@@ -22,7 +22,7 @@ The Airbnb Clone Project is a comprehensive, real-world application designed to 
 
 9. DevOps Engineer: They manage the infrastructure and tools for building, testing, and deploying the application. They're the ones who make sure the app is running smoothly on the servers and can be updated without issues.
 
-## Technology Stack Overview
+## Technology Stack
 ### Desription of the technologies to be used in the AirBnB clone project and their application 
 
 ### Backend and API Development
@@ -52,7 +52,7 @@ The purpose of Docker is to containerize the application, packaging the code and
 #### CI/CD Pipelines: 
 The purpose of these automated pipelines is to streamline the entire development workflow. CI (Continuous Integration) automatically tests new code changes to catch bugs early, while CD (Continuous Deployment) automatically deploys the tested code to production. This ensures that new features and bug fixes can be delivered to users quickly and reliably.
 
-## Database Design Overview
+## Database Design
 ### Below are the key entities that represent the core data of the application. Here are these main entities and their relationships.
 
 ### Users 👥
@@ -169,3 +169,27 @@ The review system builds trust and credibility within the community. It allows g
 
 ### Data Optimization
 This feature focuses on the performance and efficiency of the application's backend. It involves implementing strategies like database indexing, caching with Redis, and writing efficient queries to ensure that data is retrieved and stored quickly, even as the number of users and properties grows. Good data optimization is key to a fast and responsive user experience.
+
+## API Security
+Key security measures for the project will be implemented to protect user data, ensure secure transactions, and maintain the integrity of the platform. The main measures include authentication, authorization, and rate limiting.
+
+### Authentication 🔐
+This is the process of verifying a user's identity. For an Airbnb clone, it ensures that a user is who they claim to be, typically through a username and password. The system will securely store password hashes instead of plain text passwords to prevent them from being exposed in the event of a data breach. The goal is to provide a secure login process that prevents unauthorized access to user accounts.
+
+### Authorization 🛂
+Once a user has been authenticated, authorization determines what they are permitted to do. This system ensures that a guest cannot, for example, view the payment details of another guest or edit a property listing that they don't own. It implements a permissions-based model to restrict access to resources, ensuring that users can only interact with the parts of the application they are supposed to.
+
+### Rate Limiting ⏱️
+Rate limiting controls the number of requests a user can make to the server in a given period. This is a crucial defense against brute-force attacks, where a malicious actor tries to guess a user's password by making thousands of login attempts. By limiting the number of failed login attempts from a single IP address, the system can significantly slow down or block such attacks, protecting user accounts from compromise.
+
+## Why Security is Crucial for Each Area
+### Protecting User Data
+Security is paramount here because the platform handles a large amount of sensitive personal information, including names, email addresses, and contact details. A security breach could expose this data, leading to identity theft or other malicious activities. Strong authentication and authorization are vital to ensure user data remains confidential and accessible only by the legitimate account owner.
+
+### Securing Payments
+Payment security is non-negotiable for any e-commerce platform. It is the reason users must feel safe entering their credit card or bank details. The project will integrate with a trusted third-party payment gateway that handles sensitive card data, ensuring the platform itself does not store this information. This approach, combined with secure transaction protocols, protects both the users' financial information and the business from fraud and legal issues.
+
+### Maintaining Platform Integrity
+The integrity of the platform depends on the trustworthiness of its data. Security measures like authorization prevent malicious users from tampering with listings, bookings, or reviews. Without these controls, a competitor or a dissatisfied user could easily manipulate data, leading to a loss of trust from the community and ultimately, the failure of the platform.
+
+
