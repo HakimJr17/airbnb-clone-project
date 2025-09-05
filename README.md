@@ -1,3 +1,6 @@
+# About the Project
+The Airbnb Clone Project is a comprehensive, real-world application designed to simulate the development of a robust booking platform like Airbnb. It involves a deep dive into full-stack development, focusing on backend systems, database design, API development, and application security. This project enables learners to understand complex architectures, workflows, and collaborative team dynamics while building a scalable web application.
+
 ## Team Roles
 ### A breakdown of the various roles required for a project like an Airbnb clone. I outlines what each position does and its importance in bringing a software product from an idea to a functional reality.
 1. Business Analyst (BA): They figure out what the app needs to do from a business perspective. They'd define features like "users can search for listings" or "hosts can create a profile." They're the bridge between the business side and the technical team.
