@@ -51,3 +51,101 @@ The purpose of Docker is to containerize the application, packaging the code and
 
 #### CI/CD Pipelines: 
 The purpose of these automated pipelines is to streamline the entire development workflow. CI (Continuous Integration) automatically tests new code changes to catch bugs early, while CD (Continuous Deployment) automatically deploys the tested code to production. This ensures that new features and bug fixes can be delivered to users quickly and reliably.
+
+## Database Design
+### Below are the key entities that represent the core data of the application. Here are these main entities and their relationships.
+
+### Users 👥
+This entity represents everyone on the platform, including both guests and hosts. A single user can act as both a guest (booking a property) and a host (listing a property).
+
+1. id: A unique identifier for each user.
+
+2. full_name: The user's name.
+
+3. email: The user's email address, which must be unique.
+
+4. password_hash: A secure, hashed version of the user's password.
+
+4. role: An indicator (e.g., 'guest', 'host') to determine what actions the user can perform.
+
+Relationship: A user can create many properties (one-to-many relationship) and a user can also make many bookings (one-to-many relationship).
+
+### Properties 🏡
+This entity contains all the information about the listings that hosts offer.
+
+1. id: A unique identifier for the property.
+
+2. host_id: A foreign key that links the property to a specific user (the host).
+
+3. title: The name of the listing.
+
+4. description: A detailed summary of the property.
+
+5. price_per_night: The cost to book the property for one night.
+
+6. location: The address or geographic coordinates of the property.
+
+Relationship: A property belongs to one user (the host), and a property can have many bookings associated with it.
+
+### Bookings 📅
+This entity records the details of each reservation made by a guest.
+
+1. id: A unique identifier for the booking.
+
+2. guest_id: A foreign key linking the booking to the user who made it.
+
+3. property_id: A foreign key linking the booking to the specific property being reserved.
+
+4. check_in_date: The date the guest's stay begins.
+
+5. check_out_date: The date the guest's stay ends.
+
+6. status: The current state of the booking (e.g., 'pending', 'confirmed', 'cancelled').
+
+Relationship: A booking belongs to one user (the guest) and one property. A property can have multiple bookings. A booking can also have one or more payments linked to it.
+
+### Reviews ⭐
+This entity stores the feedback and ratings left by guests about a property or host.
+
+1. id: A unique identifier for the review.
+
+2. booking_id: A foreign key linking the review to a specific booking.
+
+3. reviewer_id: A foreign key linking the review to the user who wrote it.
+
+4. rating: A numerical score, typically on a scale from 1 to 5.
+
+5. comment: The text of the review.
+
+Relationship: A review is always tied to a single booking and is written by a single user.
+
+### Payments 💳
+This entity handles all the transaction details for each booking.
+
+1. id: A unique identifier for the payment.
+
+2. booking_id: A foreign key that links the payment to a specific booking.
+
+3. amount: The total cost of the booking.
+
+4. status: The status of the payment (e.g., 'completed', 'pending', 'failed').
+
+5. payment_date: The date and time the payment was made.
+
+Relationship: A payment is linked to one booking. A booking can have a one-to-one relationship with a single payment, or if the system supports split payments, a one-to-many relationship.
+
+### Photos 🖼️
+This entity stores the images for each property.
+
+1. id: A unique identifier for the photo.
+
+2. property_id: A foreign key that links the photo to a specific property.
+
+3. image_url: The URL or path to the stored image file.
+
+4. is_main: A boolean field to indicate if this is the primary or "cover" photo for the listing.
+
+5. caption: A short description of the photo (e.g., 'living room view').
+
+Relationship: A property can have many photos (one-to-many relationship), but each photo belongs to only one property. This structure makes it easy to add, remove, and manage images for each listing.
+
